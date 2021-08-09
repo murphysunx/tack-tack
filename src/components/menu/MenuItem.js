@@ -1,10 +1,26 @@
+import { Nav } from "react-bootstrap";
+import React, { useState } from "react";
+
 import MenuItemCatelog from "./MenuItemCatelog";
 
 function MenuItem() {
+  const [activeTab, setActiveTab] = useState("lists");
+
   return (
     <>
-      <div>
-        <ul class="nav nav-pills nav-fill">
+      <Nav variant="tabs" defaultActiveKey="lists" activeKey={activeTab}>
+        <Nav.Item onClick={() => setActiveTab("lists")}>
+          <Nav.Link eventKey="lists">Lists</Nav.Link>
+        </Nav.Item>
+        <Nav.Item onClick={() => setActiveTab("tags")}>
+          <Nav.Link eventKey="tags">Tags</Nav.Link>
+        </Nav.Item>
+        <Nav.Item onClick={() => setActiveTab("filters")}>
+          <Nav.Link eventKey="filters">Filters</Nav.Link>
+        </Nav.Item>
+      </Nav>
+      {/* <div>
+        <ul class="nav nav-tabs">
           <li class="nav-item">
             <a class="nav-link active" href="#">
               Lists
@@ -21,7 +37,7 @@ function MenuItem() {
             </a>
           </li>
         </ul>
-      </div>
+      </div> */}
 
       <div class="list-group">
         <a
