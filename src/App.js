@@ -1,25 +1,16 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 
 import "./components/menu";
-import Menu from "./components/menu";
+// import Menu from "./components/menu";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello TackTack</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Menu />
-      </header>
+    <div className="d-flex vh-100">
+      <div className="col-2 menu">Menu</div>
+      <div className="col-5 items">Items</div>
+      <div className="col-5 item-detail">Item Detail</div>
     </div>
   );
 }

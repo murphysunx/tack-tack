@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.menu {
+  background-color: #61dafb;
+}
+
+.items {
+  background-color: blue;
+}
+
+.item-detail {
+  background-color: cadetblue;
+}
