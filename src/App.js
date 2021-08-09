@@ -1,6 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
 
+import "./components/menu";
+import Menu from "./components/menu";
+
 function App() {
   return (
     <div className="App">
@@ -15,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <Menu />
       </header>
     </div>
   );
