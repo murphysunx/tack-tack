@@ -2,9 +2,9 @@ import { Nav } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import React, { useState } from "react";
 
-function MenuItem() {
-  const [activeTab, setActiveTab] = useState("lists");
+function MenuItem(props) {
   const [activeList, setActiveList] = useState("Personal");
+  const { activeTab, setActiveTab } = props;
 
   return (
     <>
