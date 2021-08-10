@@ -19,25 +19,6 @@ function MenuItem() {
           <Nav.Link eventKey="filters">Filters</Nav.Link>
         </Nav.Item>
       </Nav>
-      {/* <div>
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">
-              Lists
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Tags
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Filters
-            </a>
-          </li>
-        </ul>
-      </div> */}
 
       <div class="list-group">
         <a
