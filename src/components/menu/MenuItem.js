@@ -1,10 +1,10 @@
 import { Nav } from "react-bootstrap";
+import ListGroup from "react-bootstrap/ListGroup";
 import React, { useState } from "react";
-
-import MenuItemCatelog from "./MenuItemCatelog";
 
 function MenuItem() {
   const [activeTab, setActiveTab] = useState("lists");
+  const [activeList, setActiveList] = useState("Personal");
 
   return (
     <>
@@ -20,24 +20,36 @@ function MenuItem() {
         </Nav.Item>
       </Nav>
 
-      <div class="list-group">
-        <a
-          href="#"
-          class="list-group-item list-group-item-action active"
-          aria-current="true"
+      <ListGroup as="ul" activeKey={activeList}>
+        <ListGroup.Item
+          as="li"
+          onClick={() => setActiveList("Personal")}
+          eventKey="Personal"
         >
-          The current link item
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-          A second link item
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-          A third link item
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-          A fourth link item
-        </a>
-      </div>
+          Personal
+        </ListGroup.Item>
+        <ListGroup.Item
+          as="li"
+          onClick={() => setActiveList("Ausmed")}
+          eventKey="Ausmed"
+        >
+          Ausmed
+        </ListGroup.Item>
+        <ListGroup.Item
+          as="li"
+          onClick={() => setActiveList("Career")}
+          eventKey="Career"
+        >
+          Career
+        </ListGroup.Item>
+        <ListGroup.Item
+          as="li"
+          onClick={() => setActiveList("Learning")}
+          eventKey="Learning"
+        >
+          Learning
+        </ListGroup.Item>
+      </ListGroup>
     </>
   );
 }

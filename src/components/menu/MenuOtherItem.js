@@ -1,22 +1,41 @@
+import ListGroup from "react-bootstrap/ListGroup";
+import React, { useState } from "react";
+
 function MenuOtherItem() {
+  const [activeItem, setActiveItem] = useState("Personal");
+
   return (
-    <div class="list-group">
-      <a
-        href="#"
-        class="list-group-item list-group-item-action active"
-        aria-current="true"
-      >
-        Completed
-      </a>
-      <a href="#" class="list-group-item list-group-item-action">
-        Trash
-      </a>
-      <a href="#" class="list-group-item list-group-item-action">
-        Habit
-      </a>
-      <a href="#" class="list-group-item list-group-item-action">
-        Summary
-      </a>
+    <div>
+      <ListGroup as="ul" activeKey={activeItem}>
+        <ListGroup.Item
+          as="li"
+          onClick={() => setActiveItem("Completed")}
+          eventKey="Completed"
+        >
+          Completed
+        </ListGroup.Item>
+        <ListGroup.Item
+          as="li"
+          onClick={() => setActiveItem("Trash")}
+          eventKey="Trash"
+        >
+          Trash
+        </ListGroup.Item>
+        <ListGroup.Item
+          as="li"
+          onClick={() => setActiveItem("Habit")}
+          eventKey="Habit"
+        >
+          Habit
+        </ListGroup.Item>
+        <ListGroup.Item
+          as="li"
+          onClick={() => setActiveItem("Summary")}
+          eventKey="Summary"
+        >
+          Summary
+        </ListGroup.Item>
+      </ListGroup>
     </div>
   );
 }
