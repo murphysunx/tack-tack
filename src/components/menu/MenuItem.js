@@ -3,8 +3,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import React, { useState } from "react";
 
 function MenuItem(props) {
-  const [activeList, setActiveList] = useState("Personal");
-  const { activeTab, setActiveTab } = props;
+  const { activeTab, setActiveTab, activeList, setActiveList } = props;
 
   return (
     <>

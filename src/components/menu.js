@@ -8,14 +8,29 @@ import React, { useState } from "react";
 
 function Menu() {
   const [activeTab, setActiveTab] = useState("lists");
+  const [activeList, setActiveList] = useState("Personal");
+  const [activeItemCatelog, setActiveItemCatelog] = useState("All");
+  const [activeListCal, setActiveListCal] = useState(false);
+  const [activeItem, setActiveItem] = useState("Completed");
 
   return (
     <div>
       <MenuHeader />
-      <MenuItemCatelog />
-      <MenuItem activeTab={activeTab} setActiveTab={setActiveTab} />
-      <MenuLocalCalendar />
-      <MenuOtherItem />
+      <MenuItemCatelog
+        activeItemCatelog={activeItemCatelog}
+        setActiveItemCatelog={setActiveItemCatelog}
+      />
+      <MenuItem
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        activeList={activeList}
+        setActiveList={setActiveList}
+      />
+      <MenuLocalCalendar
+        activeListCal={activeListCal}
+        setActiveListCal={setActiveListCal}
+      />
+      <MenuOtherItem activeItem={activeItem} setActiveItem={setActiveItem} />
     </div>
   );
 }

@@ -1,14 +1,14 @@
 function MenuHeader() {
   return (
     <div>
-      <img src="" class="img-thumbnail" alt="..." />
-      <button type="button" class="btn btn-primary">
+      <img src="" className="img-thumbnail" alt="..." />
+      <button type="button" className="btn btn-primary">
         Primary
       </button>
-      <button type="button" class="btn btn-secondary">
+      <button type="button" className="btn btn-secondary">
         Secondary
       </button>
-      <button type="button" class="btn btn-success">
+      <button type="button" className="btn btn-success">
         Success
       </button>
     </div>

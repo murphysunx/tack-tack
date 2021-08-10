@@ -1,8 +1,8 @@
 import ListGroup from "react-bootstrap/ListGroup";
 import React, { useState } from "react";
 
-function MenuOtherItem() {
-  const [activeItem, setActiveItem] = useState("Personal");
+function MenuOtherItem(props) {
+  const { activeItem, setActiveItem } = props;
 
   return (
     <div>
